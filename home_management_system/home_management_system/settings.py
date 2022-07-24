@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hms.apps.HmsConfig',
     'finances.apps.FinancesConfig',
+    'chores.apps.ChoresConfig',
     "django_browser_reload",
 ]
 

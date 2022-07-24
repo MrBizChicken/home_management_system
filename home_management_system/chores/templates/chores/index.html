@@ -1,0 +1,33 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'chores/style.css' %}">
+<td>
+  <table>
+
+    <tr>
+
+      <th><h2>Chore</h2></th>
+      <th><h2>Commet</h2></th>
+      <th><h2>Task given to</h2></th>
+      <th><h2>Money you will earn if this task is completed</h2></th>
+      <th><h2>Score points you will earn</h2></th>
+      <th><h2>click the box if task is completed</h2></th>
+    </tr>
+    {% for chore in Chores %}
+    <tr>
+
+
+        <th><h1>{{chore.name}}</h1></th>
+
+        <th><h1>{{chore.comment}}</h1></th>
+        <th><h1>{{chore.person_to_task}}</h1><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPf4PMMgtDVB83nG9Yz5BnHacMaT9SCMjh2g&usqp=CAU" alt="Trulli" width="64" height="64"></th>
+
+        <th><h3>{{chore.money_earned}}</h3></th>
+        <th><h3>{{chore.score}}</h3></th>
+        <th><h1>Done?, Are you sure you want to press this button?</h1><input type="checkbox" id="chore" name="chore" value="Chore"></th>
+
+  {% endfor %}
+    </tr>
+
+  </<table>
+</td>
